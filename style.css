@@ -1,0 +1,186 @@
+html {
+}
+
+body {
+  background: #f2f2f2;
+  margin-top: 5px;
+}
+
+.header .menu {
+  background: #3d5f6c;
+  padding: 3px 0;
+  margin-top: 5px;
+  font-family: "Gill Sans", sans-serif;/*monospace*/
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.menu nav.navbar {
+  background: #3d5f6c;
+}
+
+.menu .nav {
+  justify-content: space-evenly;
+}
+
+.menu .nav-link {
+  color: #fff;
+}
+
+.menu .nav-link.active {
+  background: initial;
+  /*
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  */
+  color: #fcc352;
+}
+
+.menu .nav-link:hover {
+  /*
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  */
+  color: #fcc352;
+}
+
+.menu .nav-link.active:hover {
+  text-decoration: initial;
+}
+
+.menu nav .dropdown-menu {
+  background-color: #3d5f6c;
+}
+
+.menu nav .dropdown-item {
+  color: white;
+}
+
+.menu nav .dropdown-item:hover {
+  color: #fcc352;
+  background: #4d798a;
+}
+
+.line--green {
+  background: #5dd1ac;
+  height: 3px;
+}
+
+.line--yellow {
+  background: #fcc352;
+  height: 3px;
+}
+
+.header-image-container {
+  background-image: url('img/Assemblee-nationale-que-font-vraiment-les-deputes-absents.jpg');
+  height: 200px;
+  width: 100%;
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+/*
+.header-image-title {
+  color: white;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 62px;
+  --text-border-color: #fcc352;
+  text-shadow: 2px 2px 0 var(--text-border-color), 2px -2px 0 var(--text-border-color), -2px 2px 0 var(--text-border-color), -2px -2px 0 var(--text-border-color), 2px 0px 0 var(--text-border-color), 0px 2px 0 var(--text-border-color), -2px 0px 0 var(--text-border-color), 0px -2px 0 var(--text-border-color);
+}
+
+.header-image-title .alternative-color {
+  color: #fcc352;
+  --text-border-color: white;
+  text-shadow: 2px 2px 0 var(--text-border-color), 2px -2px 0 var(--text-border-color), -2px 2px 0 var(--text-border-color), -2px -2px 0 var(--text-border-color), 2px 0px 0 var(--text-border-color), 0px 2px 0 var(--text-border-color), -2px 0px 0 var(--text-border-color), 0px -2px 0 var(--text-border-color);
+}
+*/
+.header-image-title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 53px;
+  font-family: monospace;
+  color: white;
+  --text-border-color: #22222257;
+  text-shadow: 2px 2px 0 var(--text-border-color), 2px -2px 0 var(--text-border-color), -2px 2px 0 var(--text-border-color), -2px -2px 0 var(--text-border-color), 2px 0px 0 var(--text-border-color), 0px 2px 0 var(--text-border-color), -2px 0px 0 var(--text-border-color), 0px -2px 0 var(--text-border-color);
+}
+
+.header-image-title .alternative-color {
+  color: #fcc352;
+  --text-border-color: #22222257;
+  text-shadow: 2px 2px 0 var(--text-border-color), 2px -2px 0 var(--text-border-color), -2px 2px 0 var(--text-border-color), -2px -2px 0 var(--text-border-color), 2px 0px 0 var(--text-border-color), 0px 2px 0 var(--text-border-color), -2px 0px 0 var(--text-border-color), 0px -2px 0 var(--text-border-color);
+}
+
+h1, h2 {
+  color: #103a4a;
+}
+
+.find-your-representative-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+.find-your-representative {
+  border: 3px solid #103a4a;
+  border-radius: 10px;
+  padding: 12px;
+  max-width: 650px;
+}
+
+.find-your-representative__title-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.find-your-representative__title {
+  background: #103a4a;
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: white;
+  padding: 1px 13px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.find-your-representative__content {
+  display: flex;
+}
+
+.find-your-representative__form-spacer {
+  width: 30px;
+}
+
+.find-your-representative__form-label {
+  color: #103a4a;
+}
+
+.find-your-representative__search-button {
+  border-color: #a6a6a6;
+  background-color: #ffb579;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.clickable:hover, .clickable *:hover {
+  cursor: pointer;
+}

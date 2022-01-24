@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Moi Citoyen Lambda</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+  <div id="app"></div>
+  <div id="test">
+    <header class="header">
+      <div class="logo">
+        <a href="/"><img src="img/mcl_logo.png" width="354px" height="82px" alt="Logo de Moi Citoyen Lambda" /></a>
+      </div>
+      <div class="menu">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex justify-content-evenly flex-column flex-lg-row flex-grow-1">
+                <a class="nav-link active" aria-current="page" href="#">Mon compte</a>
+                <div class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Médias</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <a class="nav-link" href="#">&Agrave; propos</a>
+                <a class="nav-link" href="#">Le parlement</a>
+                <a class="nav-link" href="#">Nous soutenir</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="line--green"></div>
+      <div class="line--yellow"></div>
+      <div class="line--green"></div>
+      <div class="header-image-container">
+        <div class="header-image-title">Surveillons <span class="alternative-color">nos députés&nbsp;!</span></div>
+      </div>
+      <div class="line--yellow"></div>
+      <div class="line--yellow"></div>
+    </header>
+    <main class="main">
+      <div class="container">
+        
+        <div class="find-your-representative-container">
+          <div class="find-your-representative">
+            <div class="find-your-representative__title-container">
+              <div class="find-your-representative__title">Trouvez votre député</div>
+            </div>
+            <div class="find-your-representative__content">
+              <div class="find-your-representative__form">
+                <label for="search-name" class="find-your-representative__form-label">Son nom</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" name="search-name" placeholder="" aria-label="Son nom" aria-describedby="button-search-name">
+                  <button class="btn btn-outline-secondary find-your-representative__search-button" type="button" id="button-search-name">&#128269;</button>
+                </div>
+              </div>
+              <div class="find-your-representative__form-spacer"></div>
+              <div class="find-your-representative__form">
+                <label for="search-city" class="find-your-representative__form-label">Votre ville</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" name="search-city" placeholder="" aria-label="Votre ville" aria-describedby="button-search-city">
+                  <button class="btn btn-outline-secondary find-your-representative__search-button" type="button" id="button-search-city">&#128269;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col">
+            <h1>Un bref constat sur notre système</h1>
+            <p>Notre régime politique ne donne que peu de pouvoir à nous les citoyens&nbsp;:</p>
+            <ul>
+              <li>Nous pouvons nous présenter à des élections, mais le processus électoral comporte bien des failles, que vous pourrez trouver développées ici.</li>
+              <li>Nous pouvons également élire des représentants, nous leur déléguons la capacité de construire les lois, de les amender et de les voter pour nous.</li>
+            </ul>
+
+            <h2>Notre régime comporte bien des lacunes</h2>
+            <p>L'abstention, les contestations, les dérives de nos élus nous montrent que notre système de gouvernance a besoin d'un nouveau souffle démocratique !</p>
+            <ul>
+              <li>Ce nouveau souffle a été incarné par de nomreux mouvements citoyens comme Les Gilets Jaunes dont la revendication phare est le Référendum d'Initiative Citoyenne (RIC), ou encore Nuit Debout.</li>
+              <li>Les partis politiques ont également senti cette attente, ils ont donc intégré des dispositifs participatifs pour la construction de leurs programmes (nous avons tout de même pu voir que cela n'a pas incité les élus à respecter leurs engagements).</li>
+              <li>Nous pouvons entendre de nombreux intellectuels de tous bords dénoncer les défaillances de notre démocratie, en poussant différentes solutions (Julia Cagé, Étienne Chouard, Loic Blondiaux, Dimitri Courant et bien d'autres)</li>
+            </ul>
+
+              <figure class="text-center">
+                <blockquote class="blockquote">
+                  <p>"Le constat ne suffit pas, il nous faut agir pour pousser nos élus à changer, passons de simples électeurs à citoyens !"</p>
+                </blockquote>
+              </figure>
+
+              <p>Le collectif Moi Citoen Lambda souhaite accompagner cet élan démocratique en travaillant sur plusieurs axes :</p>
+
+              <p>Nous mettons en place un contrôle citoyen de nos élus, un contrôle qui n'est ni complaisant ni hostile, il a pour but d'informer nos concitoyens sur :</p>
+              <ul>
+                <li>L'activité de nos parlementaires</li>
+                <li>Les positions de votes</li>
+                <li>Voir si le député respectre ses engagements vis à vis de notre label</li>
+                <li>Nous souhaitons vulgariser les lois les plus importantes</li>
+                <li>Maintenir un éhcnage entre les élus et les citoyens</li>
+              </ul>
+              <p>Nous avons commencé à faire évoluer les pratiques de certains hommes politiques grâce à nos interventions et suggestions. Si nos aspirations résonnent avec les vôtres, rejoignez-nous !</p>
+
+              <div class="text-center">
+                <h2>Rejoignez-nous !</h2>
+                <a href="https://www.facebook.com/MoiCitoyenLambda"><img src="img/logo_facebook.png" width="100px" alt="Logo Facebook" /></a><a href="https://www.youtube.com/channel/UCQvc3gFmN9PKcogaCv3sobw"><img src="img/logo_youtube.png" width="100px" alt="Logo Youtube" /></a><a href="mailto:contact@moicitoyenlambda.fr"><img src="img/logo_message.png" width="100px" alt="Logo Message" /></a><a href="https://discord.gg/vpZzdzZ"><img src="img/logo_discord.png" width="100px" alt="Logo Discord" /></a><a href="https://twitter.com/moi_citoyen"><img src="img/logo_twitter.png" width="100px" alt="Logo Twitter" /></a>
+                <p>contact@moicitoyenlambda.fr</p>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  
+  <script src="node_modules/react/umd/react.development.js"></script>
+  <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/modules/index.js" type="module"></script>
+</body>
+</html>
