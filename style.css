@@ -61,14 +61,16 @@ body {
   background: #4d798a;
 }
 
+/*
 .line--green {
   background: #5dd1ac;
   height: 3px;
 }
+*/
 
 .line--yellow {
   background: #fcc352;
-  height: 3px;
+  height: 5px;
 }
 
 .header-image-container {
