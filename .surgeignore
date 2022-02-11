@@ -1,1 +1,7 @@
-!node_modules
+!node_modules/bootstrap/dist/css/bootstrap.min.css
+!node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
+!node_modules/react/umd/react.development.js
+!node_modules/react/umd/react.production.min.js
+!node_modules/react-dom/umd/react-dom.development.js
+!node_modules/react-dom/umd/react-dom.production.min.js
+!node_modules/react-bootstrap/dist/react-bootstrap.min.js
