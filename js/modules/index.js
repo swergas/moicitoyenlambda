@@ -30,7 +30,7 @@ const Logo = () => {
 };
 
 const NavLink = ({label, href, isSelected = false, ...props}) => {
-  let cssClasses = "nav-link";
+  let cssClasses = "menu__item nav-link";
   if (isSelected){
     cssClasses += " active";
   }
@@ -47,7 +47,7 @@ const NavLink = ({label, href, isSelected = false, ...props}) => {
 };
 
 const NavItemDropDown = ({label, href="#", isSelected=false, children}) => {
-  let cssClasses = "nav-link dropdown-toggle";
+  let cssClasses = "submenu__label nav-link dropdown-toggle";
   if (isSelected){
     cssClasses += " active";
   }
@@ -64,7 +64,7 @@ const NavItemDropDown = ({label, href="#", isSelected=false, children}) => {
   return e(
     'div',
     {
-      className: 'nav-item dropdown'
+      className: 'menu__item submenu nav-item dropdown'
     },
     e(
       'a',
@@ -113,7 +113,7 @@ const renderNavBarElements = (elementsStructure) => {
         return e(
           'a',
           {
-            className: "dropdown-item",
+            className: "submenu__item dropdown-item",
             href: child.href,
           },
           child.label
@@ -214,17 +214,6 @@ const Header = () => {
       },
       e(Logo),
       e(CustomNavBar),
-      /*
-      e(
-        'div', {className: "line--green"}
-      ),
-      e(
-        'div', {className: "line--yellow"}
-      ),
-      e(
-        'div', {className: "line--green"}
-      )
-      */
       e(
         'div', {className: "line--yellow"}
       ),

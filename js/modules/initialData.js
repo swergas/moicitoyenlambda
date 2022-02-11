@@ -5,7 +5,7 @@ const navBarElements = [
   },
   {
     label: "Médias",
-    href: "/medias.html",
+    href: "medias.html",
     children: [
       {
         label: "Nos articles",
