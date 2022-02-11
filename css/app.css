@@ -1,3 +1,6 @@
+/* UI Components try to respect [BEM](http://getbem.com/naming/) for the naming of their CSS classes */
+@import "./modules/CustomNavBar.css";
+
 html {
 }
 
@@ -6,51 +9,13 @@ body {
   margin-top: 5px;
 }
 
-.menu {
-  background: #3d5f6c;
-  padding: 3px 0;
-  margin-top: 5px;
-  font-family: "Gill Sans", sans-serif;/*monospace*/
-  font-weight: bold;
-  font-size: 19px;
-}
-
-.menu nav.navbar {
-  background: #3d5f6c;
-}
-
-.menu__item, .submenu__label, .submenu__item {
-  color: #fff;
-}
-
-.menu__item.active, .submenu__label.active, .submenu__item.active {
-  background: initial;
-  color: #fcc352;
-}
-
-.menu__item:hover, .submenu__label:hover, .submenu__item:hover {
-  color: #fcc352;
-}
-
-.menu__item.active:hover, .submenu__item.active:hover {
-  text-decoration: initial;
-}
-
-.submenu .dropdown-menu {
-  background-color: #3d5f6c;
-}
-
-.submenu__item:hover {
-  background: #4d798a;
-}
-
 .line--yellow {
   background: #fcc352;
   height: 5px;
 }
 
 .header-image-container {
-  background-image: url('img/Assemblee-nationale-que-font-vraiment-les-deputes-absents.jpg');
+  background-image: url('../img/Assemblee-nationale-que-font-vraiment-les-deputes-absents.jpg');
   height: 200px;
   width: 100%;
   background-position-y: center;
