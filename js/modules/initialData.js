@@ -9,24 +9,27 @@ const navBarElements = [
     children: [
       {
         label: "Nos articles",
-        href: "#"
+        href: "medias__nos_articles.html"
       },
       {
         label: "Nos réseaux sociaux",
-        href: "#"
+        href: "medias__nos_reseaux_sociaux.html"
       },
+      /*
       {
         type: "divider"
       },
+      */
       {
         label: "Contenus vidéo",
-        href: "#"
+        href: "medias__contenus_video.html"
       },
     ]
   },
   {
     label: "À propos",
-    href: "index.html"
+    href: "index.html",
+    special: "home"
   },
   {
     label: "Le parlement",
