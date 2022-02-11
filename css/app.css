@@ -48,7 +48,7 @@ body {
   text-shadow: 2px 2px 0 var(--text-border-color), 2px -2px 0 var(--text-border-color), -2px 2px 0 var(--text-border-color), -2px -2px 0 var(--text-border-color), 2px 0px 0 var(--text-border-color), 0px 2px 0 var(--text-border-color), -2px 0px 0 var(--text-border-color), 0px -2px 0 var(--text-border-color);
 }
 
-h1, h2 {
+h1, h2, h3 {
   color: #103a4a;
 }
 
