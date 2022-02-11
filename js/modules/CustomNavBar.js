@@ -64,7 +64,18 @@ const renderNavBarElements = (elementsStructure) => {
   return elementsStructure.map(navBarElement => {
     let isSelected = false;
     if (navBarElement.hasOwnProperty('href') && navBarElement.href != "#"){
-      if(window.location.href.includes(navBarElement.href)){
+      if (
+        navBarElement.hasOwnProperty('special')
+        && navBarElement.special == "home"
+        && (
+          window.location.pathname.length == 0
+          || window.location.pathname == "/"
+          || window.location.pathname.endsWith("index_with_cdn.html")
+        )
+      ){
+        isSelected = true;
+      }
+      else if(window.location.href.includes(navBarElement.href)){
         isSelected = true;
       }
     }
