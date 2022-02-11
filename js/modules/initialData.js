@@ -37,7 +37,7 @@ const navBarElements = [
   },
   {
     label: "Nous soutenir",
-    href: "#"
+    href: "nous_soutenir.html"
   },
 ];
 
