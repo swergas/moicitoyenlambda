@@ -1,7 +1,7 @@
 const navBarElements = [
   {
     label: "Mon compte",
-    href: "#"
+    href: "mon_compte.html"
   },
   {
     label: "Médias",
@@ -26,7 +26,7 @@ const navBarElements = [
   },
   {
     label: "À propos",
-    href: "#"
+    href: "index.html"
   },
   {
     label: "Le parlement",
