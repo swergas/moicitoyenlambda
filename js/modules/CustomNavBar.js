@@ -59,26 +59,35 @@ const NavItemDropDown = ({label, href="#", isSelected=false, children}) => {
   );
 };
 
+const isNavBarElementSelected = (navBarElement, current_page_location) => {
+  let isSelected = false;
+  if (navBarElement.hasOwnProperty('href') && navBarElement.href != "#"){
+    if (
+      navBarElement.hasOwnProperty('special')
+      && navBarElement.special == "home"
+      && (
+        current_page_location.pathname.length == 0
+        || current_page_location.pathname == "/"
+        || current_page_location.pathname.endsWith("index_with_cdn.html")
+      )
+    ){
+      isSelected = true;
+    }
+    else if(current_page_location.href.includes(navBarElement.href)){
+      isSelected = true;
+    }
+    else if(navBarElement.hasOwnProperty('children') && navBarElement.children.length > 0){
+      isSelected = navBarElement.children.find(child => {return isNavBarElementSelected(child, current_page_location);}) !== undefined ? true : false;
+    }
+  }
+  return isSelected;
+};
+
 // This is not a functional component, but a utility fonction which maps a Data Transfer Object (representing navigation menu elements and optional sub-menu elements) to an array of rendered components.
 const renderNavBarElements = (elementsStructure) => {
+  const current_page_location = window.location;
   return elementsStructure.map(navBarElement => {
-    let isSelected = false;
-    if (navBarElement.hasOwnProperty('href') && navBarElement.href != "#"){
-      if (
-        navBarElement.hasOwnProperty('special')
-        && navBarElement.special == "home"
-        && (
-          window.location.pathname.length == 0
-          || window.location.pathname == "/"
-          || window.location.pathname.endsWith("index_with_cdn.html")
-        )
-      ){
-        isSelected = true;
-      }
-      else if(window.location.href.includes(navBarElement.href)){
-        isSelected = true;
-      }
-    }
+    let isSelected = isNavBarElementSelected(navBarElement, current_page_location);
     if (navBarElement.hasOwnProperty('children') && navBarElement.children.length > 0){
       const {children, ...mainProps} = navBarElement;
       const renderedChildren = children.map(child => {
@@ -90,16 +99,21 @@ const renderNavBarElements = (elementsStructure) => {
             }
           );
         }
+        let isSelected = isNavBarElementSelected(child, current_page_location);
+        let cssClasses = "submenu__item dropdown-item";
+        if (isSelected){
+          cssClasses += " active";
+        }
         return e(
           'a',
           {
-            className: "submenu__item dropdown-item",
+            className: cssClasses,
             href: child.href,
           },
           child.label
         );
       });
-      if ( navBarElement.hasOwnProperty('href')){
+      if (navBarElement.hasOwnProperty('href')){
         mainProps.label = e(
           'span',
           {
