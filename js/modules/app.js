@@ -1,57 +1,10 @@
 import {navBarElements} from './initialData.js';
-import {CustomNavBar} from './CustomNavBar.js';
+import {Header} from './Header.js';
 
 const React = window.React;
 const ReactDOM = window.ReactDOM;
 const e = React.createElement;
 const Button = ReactBootstrap.Button;
-
-const Logo = () => {
-  return e(
-    'div',
-    {
-      className: "logo"
-    },
-    e(
-      'a',
-      {
-        href: "/"
-      },
-      e(
-        'img',
-        {
-          src: "img/mcl_logo.png",
-          width: "354px",
-          height: "82px",
-          alt: "Logo de Moi Citoyen Lambda"
-        }
-      )
-    )
-  );
-};
-
-const Header = () => {
-  return e(
-    React.StrictMode,
-    null,
-    e(
-      'header',
-      {
-        className: "header noselect"
-      },
-      e(Logo),
-      e(
-        CustomNavBar,
-        {
-          elements: navBarElements
-        }
-      ),
-      e(
-        'div', {className: "line--yellow"}
-      ),
-    )
-  );
-};
 
 const Footer = () => {
   return e(
@@ -73,7 +26,7 @@ function main(){
   }
   headerContainer.innerHTML = "Chargement...";
   footerContainer.innerHTML = "Chargement...";
-  ReactDOM.render(e(Header), headerContainer);
+  ReactDOM.render(e(Header, {navBarElements: navBarElements}), headerContainer);
   ReactDOM.render(e(Footer), footerContainer);
 }
 
